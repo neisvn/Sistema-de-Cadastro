@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Tinos&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="/scripts.js"></script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+  </head>
+  <body>
+    <div class="telaLogin">
+      
+      <div class="central">
+        <img id="certificado" src="./assets/certificado.svg" />
+        <br />
+        <h2>Login</h2>
+        <br />
+        <input type="email" id="email" placeholder="Insira Seu E-Mail" />
+        <br />
+        <h2>Senha</h2>
+        <br />
+        <input
+          type="password"
+          name="pwd"
+          id="senha"
+          placeholder="Insira Sua Senha"
+        />
+        <br />
+        <input
+          type="button"
+          id="btn"
+          value="Entrar"
+          onclick="logar()"
+          return
+          false
+        />
+        <br />
+        <h3>Ainda não tem conta?</h3>
+        <br />
+
+        <dialog >
+          <form>
+            <h2>Cadastre-se</h2>
+            <label for="nome">Informe seu nome completo</label>
+            <br />
+            <input type="text" name="name" id="name" />
+            <br />
+            <label for="dataNasc">Data de nascimento</label>
+            <br />
+            <input type="date" name="dataNasc" id="dataNasc" />
+            <br />
+            <label for="addEmail">Informe um e-mail válido</label>
+            <br />
+            <input type="email" name="addEmail" id="addEmail" />
+            <br />
+            <label for="senha">Crie uma senha</label>
+            <br />
+            <input type="password" name="senha" id="senha" />
+            <br />
+            <label for="confirmaSenha">Confirme a senha</label>
+            <br />
+            <input type="password" name="confirmaSenha" id="confirmaSenha" />
+            <br />
+            <input type="submit" value="Cadastrar" onclick="logar()"/>
+            <input type="button" id ="cancelar" onclick="fechaModal()"value="Cancelar">
+          </form>
+        </dialog>
+        <input value="Criar conta" type="button" id="buttonCad" onclick="openCadastroModal()"></input>
+
+      </div>
+    </div>
+  </body>
+</html>
