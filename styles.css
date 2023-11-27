@@ -57,6 +57,7 @@ input[type="button"] {
   border-radius: 5px;
   border: none;
   font-size: 14px;
+  cursor: pointer;
 }
 
 #btn:hover {
@@ -68,6 +69,7 @@ input[type="button"] {
   color: #f0ffffde;
   cursor: pointer;
   transition: background-color 0.3s;
+  
 }
 
 dialog {

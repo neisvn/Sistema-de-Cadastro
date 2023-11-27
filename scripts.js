@@ -2,7 +2,6 @@ function logar() {
   var email = document.getElementById("email").value;
   var senha = document.getElementById("senha").value;
   if (email == "nathansilvamachado@gmail.com" && senha == "1234") {
-    alert("logado");
     location.href = "home.html";
   } else {
     alert("login ou senha incorretos!");

@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body{
+    height: 100vh;
+   
+}
+@media screen and (max-width: 768px) {
+    nav.navegar {
+        width: 100%;
+        padding: 100px 1%;
+       
+    }
+
+    .painel {
+        margin: 0;
+        padding: 20vh 5%;
+      
+    }}
+nav.navegar{
+    width: 4%;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+    padding: 40px 0px 40px 1%;
+box-shadow: 3px 0 0 rgba(0, 255, 255, 0.347);
+position:fixed;
+top:0;
+left: 0;
+overflow: hidden;
+transition: 0.5s;
+}
+nav.navegar:hover{
+    width: 15vw;
+    transition: 1s;
+}
+.expandir{
+    width: 100%;
+    padding-left: 5px;
+}
+.expandir>i svg{
+    color: aquamarine;
+   
+    cursor: pointer;
+}
+ul{
+    height: 100%;
+    list-style-type:none;
+}
+
+ul li.item a{
+  color: #fff;
+  text-decoration: none;  
+  font-size: 20px;
+  padding: 20px 4%;
+  display: flex;
+  margin-bottom: 15px;
+  line-height: 30px;
+}
+ul li.item a:hover{
+    color: #ffffff;
+    text-decoration: none;  
+    font-size: 30px;
+    padding: 20px 4%;
+    background-color: rgba(127, 255, 212, 0.711);
+    transition: 0.3s;
+}
+ul li.item a .txt-link{
+    margin-left: 20px;
+}
+.icone{
+   color: rgb(127, 255, 212);
+   
+   
+}
+
+.painel{
+    margin-left: 15%;
+    margin-right:10%;
+    padding:20vh 5%;
+    background-color: yellow;
+}
