@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+
+nav.navegar {
+  width: 6vw;
+  min-width: 5vw;
+  height: 100%;
+  background-color: rgb(0, 0, 0);
+  padding: 40px 0px 40px 1%;
+  box-shadow: 3px 0 0 rgba(0, 255, 255, 0.347);
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+nav.navegar:hover {
+  width: 15%;
+  transition: 1s;
+}
+
+.expandir {
+  width: 100%;
+  padding-left: 2px;
+}
+
+.expandir > i svg {
+  color: aquamarine;
+  cursor: pointer;
+}
+
+ul {
+  height: calc(100vh - 80px);
+  overflow-y: auto;
+  list-style-type: none;
+  padding-top: 40px;
+}
+
+ul li.item a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1em;
+  padding: 20px 4%;
+  display: block;
+  line-height: 2.5;
+}
+
+ul li.item a:hover {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.2em;
+  padding: 10px 4%;
+  background-color: rgba(127, 255, 212, 0.711);
+  transition: 0.3s, 0.3s;
+}
+
+ul li.item a .txt-link {
+  font-size: 1em;
+  margin-left: 5px;
+}
+
+.painel {
+  padding: 20vh 20%;
+  justify-content: center;
+  margin: 0 5%;
+}
+
+.card {
+  padding: 5vh 5vw;
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+  nav.navegar {
+    width: 15%;
+    min-width: 0;
+    padding: 20px 0;
+  }
+
+  nav.navegar:hover {
+    width: 20%;
+  }
+
+  ul {
+    height: auto;
+    overflow-y: visible;
+  }
+
+  ul li.item a {
+    padding: 10px 2%;
+  }
+
+  .painel {
+    padding: 10vh 5%;
+  }
+}
