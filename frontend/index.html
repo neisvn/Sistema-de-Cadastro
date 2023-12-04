@@ -7,8 +7,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Tinos&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles.css" />
-    <script src="/scripts.js"></script>
-
+    <script src="./scripts.js"></script>
+<script src="/backend/index.js"></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login</title>
@@ -45,11 +45,12 @@
         <br />
 
         <dialog >
-          <form>
+ 
+          <form id="formUsuario">
             <h2>Cadastre-se</h2>
             <label for="nome">Informe seu nome completo</label>
             <br />
-            <input type="text" name="name" id="name" />
+            <input type="text" name="name" id="nome" />
             <br />
             <label for="dataNasc">Data de nascimento</label>
             <br />
@@ -57,7 +58,7 @@
             <br />
             <label for="addEmail">Informe um e-mail válido</label>
             <br />
-            <input type="email" name="addEmail" id="addEmail" />
+            <input type="email" name="addEmail" id="email" />
             <br />
             <label for="senha">Crie uma senha</label>
             <br />
@@ -67,7 +68,7 @@
             <br />
             <input type="password" name="confirmaSenha" id="confirmaSenha" />
             <br />
-            <input type="submit" value="Cadastrar" onclick="logar()"/>
+            <input type="submit" value="Cadastrar" onclick="criarNovoUsuario()"/>
             <input type="button" id ="cancelar" onclick="fechaModal()"value="Cancelar">
           </form>
         </dialog>
