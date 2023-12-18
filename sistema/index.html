@@ -1,86 +1,118 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Tinos&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./styles.css" />
-    <script src="./scripts.js"></script>
 
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login</title>
-  </head>
-  <body>
-    <div class="telaLogin">
-      
-      <div class="central">
-        
-        <br />
-        <h2>Login</h2>
-        <br />
-        <input type="email" id="email" placeholder="Insira Seu E-Mail" oninput="validaCampo()" onkeypress="checkEnter(event)"  />
-        <br />
-        <h2>Senha</h2>
-        <br />
-        <input
-          type="password"
-          name="pwd"
-          id="senha"
-          placeholder="Insira Sua Senha"
-          onkeypress="checkEnter(event)"
-        oninput="validaCampo()"
-        />
-        <br />
-        
-        <h3>Esqueceu sua senha?</h3>
-        <input type="button" value="Recuperar Senha" id="recover-password-button" disabled ="true" onclick="recuperarSenha()" 
-          />
-        
-        <input type="button" id="btn-logar" value="Entrar" disabled="true"  onclick="logar()"/>
-   
-      
-       
-          
-        
-        <br />
-        <h3>Ainda não tem conta?</h3>
-        <br />
+<head>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Tinos&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css" />
+  <script src="./scripts.js"></script>
 
-        <dialog >
- 
-          <form id="formUsuario">
-            <h2>Cadastre-se</h2>
-            <label for="nome">Informe seu nome completo</label>
-            <br />
-            <input type="text" name="name" id="nome" />
-            <br />
-            <label for="dataNasc">Data de nascimento</label>
-            <br />
-            <input type="date" name="dataNasc" id="dataNasc" />
-            <br />
-            <label for="addEmail">Informe um e-mail válido</label>
-            <br />
-            <input type="email" name="addEmail" id="email" />
-            <br />
-            <label for="senha">Crie uma senha</label>
-            <br />
-            <input type="password" name="senha" id="senha" />
-            <br />
-            <label for="confirmaSenha">Confirme a senha</label>
-            <br />
-            <input type="password" name="confirmaSenha" id="confirmaSenha" />
-            <br />
-            <input type="submit" value="Cadastrar" onclick="criarNovoUsuario()"/>
-            <input type="button" id ="cancelar" onclick="fechaModal()"value="Cancelar">
-          </form>
-        </dialog>
-        <input value="Criar conta" type="button" id="buttonCad" onclick="openCadastroModal()"></input>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login</title>
+</head>
 
-      </div>
+<body>
+  <div class="telaLogin">
+
+    <div class="central">
+
+      <br />
+      <h2>Login</h2>
+      <br />
+      <input type="email" id="email" placeholder="Insira Seu E-Mail" oninput="validaCampo()"
+        onkeypress="checkEnter(event)" />
+      <br />
+      <h2>Senha</h2>
+      <br />
+      <input type="password" name="pwd" id="senha" placeholder="Insira Sua Senha" onkeypress="checkEnter(event)"
+        oninput="validaCampo()" />
+      <br />
+
+      <h3>Esqueceu sua senha?</h3>
+      <input type="button" value="Recuperar Senha" id="recover-password-button" disabled="true"
+        onclick="recuperarSenha()" />
+
+      <input type="button" id="btn-logar" value="Entrar" disabled="true" onclick="" />
+
+
+
+
+
+      <br />
+      <h3>Ainda não tem conta?</h3>
+      <br />
+
+      <dialog>
+
+        <form id="formUsuario">
+          <h2>Cadastre-se</h2>
+          <label for="nome">Informe seu nome completo</label>
+          <br />
+          <input type="text" name="name" id="nome" />
+          <br />
+          <label for="dataNasc">Data de nascimento</label>
+          <br />
+          <input type="date" name="dataNasc" id="dataNasc" />
+          <br />
+          <label for="addEmail">Informe um e-mail válido</label>
+          <br />
+          <input type="email" name="addEmail" id="email" />
+          <br />
+          <label for="senha">Crie uma senha</label>
+          <br />
+          <input type="password" name="senha" id="senha" />
+          <br />
+          <label for="confirmaSenha">Confirme a senha</label>
+          <br />
+          <input type="password" name="confirmaSenha" id="confirmaSenha" />
+          <br />
+          <input type="submit" value="Cadastrar" onclick="criarNovoUsuario()" />
+          <input type="button" id="cancelar" onclick="fechaModal()" value="Cancelar">
+        </form>
+      </dialog>
+      <input value="Criar conta" type="button" id="buttonCad" onclick="openCadastroModal()"></input>
+
     </div>
-  </body>
+  </div>
+  <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
+  <script type="module">
+    const firebaseConfig = {
+
+      apiKey: "AIzaSyCG3oByrzCUV8pHr947e-aSFqVTOnqJ5l0",
+
+      authDomain: "crud-4a9b2.firebaseapp.com",
+
+      projectId: "crud-4a9b2",
+
+      storageBucket: "crud-4a9b2.appspot.com",
+
+      messagingSenderId: "482071954277",
+
+      appId: "1:482071954277:web:1ed578b6834ebe470b578c"
+
+    };
+   firebase.initializeApp(firebaseConfig)
+
+    firebase.auth().signInWithEmailAndPassword().then(response => {
+     //location.href = "home.html"
+    }).catch(error =>{
+            swal(
+      "E-mail ou senha incorretos!",
+      "Caso tenha esquecido a sua senha clique em Recuperar Senha",
+      "error"
+    );
+    });{
+
+    };
+  </script>
+</body>
+
 </html>
