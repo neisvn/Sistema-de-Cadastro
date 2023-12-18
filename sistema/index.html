@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,11 +18,11 @@
     <div class="telaLogin">
       
       <div class="central">
-        <img id="certificado" src="./assets/certificado.svg" />
+        
         <br />
         <h2>Login</h2>
         <br />
-        <input type="email" id="email" placeholder="Insira Seu E-Mail" />
+        <input type="email" id="email" placeholder="Insira Seu E-Mail" oninput="validaCampo()" onkeypress="checkEnter(event)"  />
         <br />
         <h2>Senha</h2>
         <br />
@@ -30,16 +31,21 @@
           name="pwd"
           id="senha"
           placeholder="Insira Sua Senha"
+          onkeypress="checkEnter(event)"
+        oninput="validaCampo()"
         />
         <br />
-        <input
-          type="button"
-          id="btn"
-          value="Entrar"
-          onclick="logar()"
-          return
-          false
-        />
+        
+        <h3>Esqueceu sua senha?</h3>
+        <input type="button" value="Recuperar Senha" id="recover-password-button" disabled ="true" onclick="recuperarSenha()" 
+          />
+        
+        <input type="button" id="btn-logar" value="Entrar" disabled="true"  onclick="logar()"/>
+   
+      
+       
+          
+        
         <br />
         <h3>Ainda não tem conta?</h3>
         <br />
