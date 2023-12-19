@@ -1,18 +1,3 @@
-function openCadastroModal() {
-  const modal = document.querySelector("dialog");
-  modal.showModal();
-}
-
-function fechaModal() {
-  const modal = document.querySelector("dialog");
-  modal.close();
-}
-
-const botaoCancelar = document.getElementById("cancelar");
-const buttonCad = document.getElementById("buttonCad");
-buttonCad.addEventListener("click", openCadastroModal);
-botaoCancelar.addEventListener("click", fechaModal);
-
 function validaCampo() {
   const emailValido = isEmailvalid();
   document.getElementById("recover-password-button").disabled = !emailValido;
@@ -57,7 +42,7 @@ function logar() {
     .auth()
     .signInWithEmailAndPassword(email, senha)
     .then((response) => {
-      location.href = "home.html";
+      location.href = "../Home/Home.html";
     })
     .catch((error) => {
       console.log("erro: ", error);

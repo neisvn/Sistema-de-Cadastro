@@ -10,12 +10,14 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Tinos&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./styles.css" />
+  <link rel="stylesheet" href="../Login/login.css" >
+  <link rel="stylesheet" href="../styles.css" >
   <script src="./scripts.js"></script>
   <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Login</title>
 </head>
 
@@ -50,35 +52,8 @@
       <h3>Ainda não tem conta?</h3>
       <br />
 
-      <dialog>
-
-        <form id="formUsuario">
-          <h2>Cadastre-se</h2>
-          <label for="nome">Informe seu nome completo</label>
-          <br />
-          <input type="text" name="name" id="nomeCad" />
-          <br />
-          <label for="dataNasc">Data de nascimento</label>
-          <br />
-          <input type="date" name="dataNasc" id="dataNasc" />
-          <br />
-          <label for="addEmail">Informe um e-mail válido</label>
-          <br />
-          <input type="email" name="addEmail" id="emailCad" />
-          <br />
-          <label for="senhaCad">Crie uma senha</label>
-          <br />
-          <input type="password" name="senha" id="senhaCad" />
-          <br />
-          <label for="confirmaSenha">Confirme a senha</label>
-          <br />
-          <input type="password" name="confirmaSenha" id="confirmaSenha" />
-          <br />
-          <input type="submit" value="Cadastrar" onclick="criarNovoUsuario()" />
-          <input type="button" id="cancelar" onclick="fechaModal()" value="Cancelar">
-        </form>
-      </dialog>
-      <input value="Criar conta" type="button" id="buttonCad" onclick="openCadastroModal()"></input>
+     
+      <input value="Criar conta" type="button" id="buttonCad" onclick=""></input>
 
     </div>
   </div>
@@ -95,7 +70,9 @@
   
     appId: "1:482071954277:web:1ed578b6834ebe470b578c",
   };
-  firebase.initializeApp(firebaseConfig);</script>
+  firebase.initializeApp(firebaseConfig);
+ 
+  </script>
 </body>
 
 </html>
