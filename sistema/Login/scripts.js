@@ -15,7 +15,7 @@ function isEmailvalid() {
 
 function isPasswordValid() {
   const senha = document.getElementById("senha").value;
-  return senha.length > 0;
+  return senha.length >= 7;
 }
 
 function validaEmail(email) {
