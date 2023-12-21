@@ -53,3 +53,7 @@ input[type="button"] {
   cursor: pointer;
   transition: background-color 0.3s;
 }
+#cadastrar:disabled {
+  opacity: 0.5;
+  color: black;
+}
