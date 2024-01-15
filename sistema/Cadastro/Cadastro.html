@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="../Login/scripts.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
@@ -34,10 +35,10 @@
     <div class="cadastroForm">
       <form id="formUsuario">
         <h2>Cadastre-se</h2>
-
+        <i class="fa fa-envelope" aria-hidden="true"></i>
         <label for="addEmail">E-Mail</label>
         <br />
-        <i class="fa fa-envelope" aria-hidden="true"></i>
+
         <input
           type="email"
           name="addEmail"
@@ -47,9 +48,9 @@
           required
         />
         <br />
+        <i class="fa fa-lock" aria-hidden="true"></i>
         <label for="senhaCad">Crie uma senha</label>
         <br />
-        <i class="fa fa-lock" aria-hidden="true"></i>
 
         <input
           type="password"
@@ -60,9 +61,10 @@
           oninput="validaCampo()"
         />
         <br />
+        <i class="fa fa-lock" aria-hidden="true"></i>
         <label for="confirmaSenha">Confirme a senha</label>
         <br />
-        <i class="fa fa-lock" aria-hidden="true"></i>
+
         <input
           type="password"
           placeholder="As senhas devem ser iguais"
@@ -72,7 +74,13 @@
           oninput="validaCampo()"
         />
         <br />
-        <input type="button" id="cadastrar" value="Cadastrar" disabled="true" />
+        <input
+          type="button"
+          id="cadastrar"
+          value="Cadastrar"
+          disabled="true"
+          onclick="cadastrarUsuario()"
+        />
         <a href="../Login/index.html"
           ><input type="button" id="cancelar" value="Cancelar" />
         </a>

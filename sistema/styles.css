@@ -62,6 +62,7 @@ input[type="button"] {
 .fa-envelope {
   color: #350444;
   position: relative;
+  overflow: auto;
 }
 
 .fa-lock {

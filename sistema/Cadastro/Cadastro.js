@@ -24,3 +24,23 @@ function senhasBatem(senha, confirmaSenha) {
 function isSenhaValida(senha) {
   return senha.length >= 7;
 }
+
+function cadastrarUsuario(email, senha) {
+  firebase
+    .auth()
+    .createUserWithEmailAndPassword(email, senha)
+    .then((userCredential) => {
+      swal("Cadastro realizado com Sucesso");
+      const user = userCredential.user;
+      console.log("Sucesso: ", user);
+
+      console.log("Usuário cadastrado com sucesso:", user);
+    })
+    .catch((error) => {
+      swal(
+        "Erro ao cadastrar usuario",
+        "Verifique os dados e tente novamente",
+        "error"
+      );
+    });
+}
