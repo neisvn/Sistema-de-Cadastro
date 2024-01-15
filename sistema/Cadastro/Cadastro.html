@@ -51,7 +51,7 @@
         <i class="fa fa-lock" aria-hidden="true"></i>
         <label for="senhaCad">Crie uma senha</label>
         <br />
-
+        <i class="fa fa-eye" id="olhoAbertoSenha" onclick="olhaSenha()"></i>
         <input
           type="password"
           placeholder="A senha deve ter no mínimo 7 digitos"
@@ -60,11 +60,17 @@
           required
           oninput="validaCampo()"
         />
+
         <br />
         <i class="fa fa-lock" aria-hidden="true"></i>
-        <label for="confirmaSenha">Confirme a senha</label>
+        <label for="confirmaSenha">Confirme a senha </label>
         <br />
-
+        <i
+          class="fa fa-eye"
+          id="olhoAbertoConfSenha"
+          onclick="olhaConfirmaSenha()"
+        >
+        </i>
         <input
           type="password"
           placeholder="As senhas devem ser iguais"
@@ -73,6 +79,7 @@
           required
           oninput="validaCampo()"
         />
+
         <br />
         <input
           type="button"

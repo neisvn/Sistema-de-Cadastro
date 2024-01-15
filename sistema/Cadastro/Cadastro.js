@@ -44,3 +44,27 @@ function cadastrarUsuario(email, senha) {
       );
     });
 }
+function olhaSenha() {
+  const formSenha = document.getElementById("senhaCad");
+
+  const botao = document.getElementById("olhoAbertoSenha");
+  if (formSenha.type === "password") {
+    formSenha.type = "text";
+    botao.className = "fa fa-eye-slash";
+  } else {
+    formSenha.type = "password";
+    botao.className = "fa fa-eye";
+  }
+}
+function olhaConfirmaSenha() {
+  const formConfirmaSenha = document.getElementById("confirmaSenha");
+
+  const botao = document.getElementById("olhoAbertoConfSenha");
+  if (formConfirmaSenha.type === "password") {
+    formConfirmaSenha.type = "text";
+    botao.className = "fa fa-eye-slash";
+  } else {
+    formConfirmaSenha.type = "password";
+    botao.className = "fa fa-eye";
+  }
+}

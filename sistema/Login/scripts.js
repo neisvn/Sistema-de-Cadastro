@@ -53,3 +53,15 @@ function logar() {
       );
     });
 }
+function olhaSenha() {
+  const formSenha = document.getElementById("senha");
+
+  const botao = document.getElementById("olhoAbertoSenha");
+  if (formSenha.type === "password") {
+    formSenha.type = "text";
+    botao.className = "fa fa-eye-slash";
+  } else {
+    formSenha.type = "password";
+    botao.className = "fa fa-eye";
+  }
+}

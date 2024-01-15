@@ -57,3 +57,21 @@ input[type="button"] {
   opacity: 0.5;
   color: black;
 }
+.fa-eye {
+  position: absolute;
+  display: flex;
+  flex-direction: row-reverse;
+  margin-top: 10px;
+  margin-left: 27vw;
+  cursor: pointer;
+  padding: 0 5px;
+}
+.fa-eye-slash {
+  position: absolute;
+  display: flex;
+  flex-direction: row-reverse;
+  margin-top: 10px;
+  margin-left: 27vw;
+  cursor: pointer;
+  padding: 0 5px;
+}
